@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício</title>
+    <script>
+    function Maiuscula(){
+        var x = document.forms.formulario1.elements["iduper"];
+        var y = document.forms.formulario1.elements["idlower"];
+        if (x.checked = true) {
+            y.checked = false;
+            }
+        var s = document.getElementById("idNome").value;
+        s = s.toUpperCase();
+        document.getElementById("idNome").value= s;
+    }
+    function Minuscula(){
+        var x = document.forms.formulario1.elements["iduper"];
+        var y = document.forms.formulario1.elements["idlower"];
+        if (y.checked = true) {
+            x.checked = false;
+        }
+        var s = document.getElementById("idNome").value;
+        s = s.toLowerCase();
+        document.getElementById("idNome").value= s;
+    }
+        
+    </script>
+</head>
+
+<body>
+    <form name="formulario1" id="formulario1">
+    Nome:
+    <input name="idNome" type="text" id="idNome" size="52" maxlength="150"><br>
+    <input type="checkbox" name="opcoes" id="iduper" value="Maiuscula" onclick="Maiuscula();"/> MAIÚSCULA<br/>
+    <input type="checkbox" name="opcoes" id="idlower" value="Minuscula" onclick="Minuscula();"/> minúscula<br/>
+    
+    
+    
+    </form>
+  
+</body>
+</html>
